@@ -12,5 +12,19 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  // const names = tutorials
+  // for (let b = 0; b < tutorials.length; b++) {
+  return tutorials.map((names) => {
+      const arr = names.split(" ");
+   for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+   }
+    const joined = arr.join(" ");
+    return joined
+  })
+  // return capitalize(tutorials[i])
+    }
+    // }
+
+console.log(titleCased())
+// console.log(capitalize(tutorials))
